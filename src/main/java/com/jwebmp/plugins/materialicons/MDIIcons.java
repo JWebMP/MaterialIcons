@@ -2,7 +2,7 @@ package com.jwebmp.plugins.materialicons;
 
 import com.jwebmp.core.base.interfaces.ICssClassName;
 
-import static com.guicedee.services.jsonrepresentation.json.StaticStrings.*;
+import static com.guicedee.modules.services.jsonrepresentation.json.StaticStrings.*;
 
 /**
  * The list of icons for the mdi icon set
