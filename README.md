@@ -23,7 +23,7 @@ Built on [Material Design Icons (Community)](https://materialdesignicons.com/) Â
 <dependency>
   <groupId>com.jwebmp.plugins</groupId>
   <artifactId>material-icons</artifactId>
-  <version>2.0.0-SNAPSHOT</version>
+  <version>2.0.3-SNAPSHOT</version>
 </dependency>
 ```
 
