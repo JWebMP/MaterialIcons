@@ -102,7 +102,6 @@ src/main/java/com/jwebmp/plugins/materialicons/
 ├── MDIIcons.java                       # Enum with 2,000+ icon constants
 ├── MaterialIconsPageConfigurator.java  # Auto-registration via ServiceLoader
 └── implementations/
-    ├── MaterialIconsInclusionModule.java
     └── MaterialIconsExclusionsModule.java
 ```
 

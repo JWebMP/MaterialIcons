@@ -1,19 +1,17 @@
 package com.jwebmp.plugins.materialicons.implementations;
 
 import com.guicedee.client.services.config.IGuiceScanModuleExclusions;
-
-import jakarta.validation.constraints.NotNull;
-import java.util.HashSet;
+import com.guicedee.client.services.config.IGuiceScanJarExclusions;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
-public class MaterialIconsExclusionsModule
-		implements IGuiceScanModuleExclusions<MaterialIconsExclusionsModule>
-{
-	@Override
-	public @NotNull Set<String> excludeModules()
-	{
-		Set<String> strings = new HashSet<>();
-		strings.add("com.jwebmp.plugins.materialicons");
-		return strings;
-	}
+/** SPI services and direct resource access do not require scanning this library. */
+public class MaterialIconsExclusionsModule implements IGuiceScanModuleExclusions<MaterialIconsExclusionsModule>, IGuiceScanJarExclusions<MaterialIconsExclusionsModule> {
+    @Override public Set<String> excludeModules() { return Set.of("com.jwebmp.plugins.materialicons"); }
+    @Override public Set<String> excludeJars() {
+        Set<String> jars = new LinkedHashSet<>();
+        jars.add("material-icons.jar");
+        for (int digit = 0; digit <= 9; digit++) jars.add("material-icons-" + digit + "*.jar");
+        return jars;
+    }
 }

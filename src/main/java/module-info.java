@@ -1,5 +1,3 @@
-import com.jwebmp.plugins.materialicons.implementations.MaterialIconsInclusionModule;
-
 module com.jwebmp.plugins.materialicons {
 
 	exports com.jwebmp.plugins.materialicons;
@@ -9,8 +7,9 @@ module com.jwebmp.plugins.materialicons {
 	requires com.guicedee.guicedinjection;
 
 	provides com.jwebmp.core.services.IPageConfigurator with com.jwebmp.plugins.materialicons.MaterialIconsPageConfigurator;
-	provides com.guicedee.client.services.config.IGuiceScanModuleInclusions with MaterialIconsInclusionModule;
 	provides com.guicedee.client.services.config.IGuiceScanModuleExclusions with com.jwebmp.plugins.materialicons.implementations.MaterialIconsExclusionsModule;
 
 	opens com.jwebmp.plugins.materialicons to tools.jackson.databind, com.jwebmp.core;
+
+    provides com.guicedee.client.services.config.IGuiceScanJarExclusions with com.jwebmp.plugins.materialicons.implementations.MaterialIconsExclusionsModule;
 }
